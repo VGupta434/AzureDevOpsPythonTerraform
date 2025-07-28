@@ -31,5 +31,6 @@ stages:
             BodyAsHtml: false
             AddAttachment: false
             SmtpServer: 'smtp.gmail.com'
+            SmtpPort: '465'
             SmtpUsername: 'vgupta.cse.2016@nist.edu'
             SmtpPassword: 'zwearnuoniqnobov'
