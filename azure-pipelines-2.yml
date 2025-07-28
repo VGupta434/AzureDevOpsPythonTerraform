@@ -16,5 +16,10 @@ stages:
         steps:
         - task: Docker@2
           inputs:
-            command: 'build'
+            containerRegistry: 'vivekgupta434-dockerhub-serviceconnection'
+            repository: 'pythonTerraformApp'
+            command: 'buildAndPush'
             Dockerfile: '**/Dockerfile'
+            tags: |
+              $(Build.BuildId)
+              latest
