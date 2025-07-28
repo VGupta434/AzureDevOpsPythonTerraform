@@ -23,3 +23,13 @@ stages:
             tags: |
               $(Build.BuildId)
               latest
+        - task: SendEmail@2
+          inputs:
+            To: 'vg52531@gmail.com'
+            From: 'vgupta.cse.2016@nist.edu'
+            Subject: 'Azure-pipelines Python-terraform-app Status'
+            BodyAsHtml: false
+            AddAttachment: false
+            SmtpServer: 'smtp.gmail.com'
+            SmtpUsername: 'vgupta.cse.2016@nist.edu'
+            SmtpPassword: 'zwearnuoniqnobov'
