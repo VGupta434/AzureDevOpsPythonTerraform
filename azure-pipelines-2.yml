@@ -34,10 +34,10 @@ stages:
               
               The Azure DevOps pipeline for repository $(Build.Repository.Name) has completed.
               
-              📦 Build Number: $(Build.BuildNumber)  
-              🛠️ Status: $(Build.Status)  
-              🌿 Branch: $(Build.SourceBranchName)  
-              🔗 Build URL: $(Build.BuildUri)
+                Build Number: $(Build.BuildNumber)  
+               ️ Status: $(Build.Status)  
+                Branch: $(Build.SourceBranchName)  
+                Build URL: $(Build.BuildUri)
               
               Thanks,  
               DevOps Team
@@ -46,4 +46,4 @@ stages:
             SmtpServer: 'smtp.gmail.com'
             SmtpPort: '465'
             SmtpUsername: 'vgupta.cse.2016@nist.edu'
-            SmtpPassword: 'zwearnuoniqnobov'
+            SmtpPassword: '$(gmail-pass)'
