@@ -17,7 +17,7 @@ stages:
         - task: Docker@2
           inputs:
             containerRegistry: 'vivekgupta434-dockerhub-serviceconnection'
-            repository: 'pythonTerraformApp'
+            repository: 'vivekgupta434/pythonTerraformApp'
             command: 'buildAndPush'
             Dockerfile: '**/Dockerfile'
             tags: |
