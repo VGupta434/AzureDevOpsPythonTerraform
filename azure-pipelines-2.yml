@@ -24,10 +24,23 @@ stages:
               $(Build.BuildId)
               latest
         - task: SendEmail@2
+          condition: always()
           inputs:
             To: 'vg52531@gmail.com'
             From: 'vgupta.cse.2016@nist.edu'
             Subject: 'Azure-pipelines Python-terraform-app Status'
+            Body: |
+              Hello,
+              
+              The Azure DevOps pipeline for repository $(Build.Repository.Name) has completed.
+              
+              📦 Build Number: $(Build.BuildNumber)  
+              🛠️ Status: $(Build.Status)  
+              🌿 Branch: $(Build.SourceBranchName)  
+              🔗 Build URL: $(Build.BuildUri)
+              
+              Thanks,  
+              DevOps Team
             BodyAsHtml: false
             AddAttachment: false
             SmtpServer: 'smtp.gmail.com'
